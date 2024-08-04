@@ -1,0 +1,32 @@
+---
+const navItems = [
+  {
+    title: "PROYECTOS",
+    url: "/#proyectos",
+  },
+  {
+    title: "EXPERIENCIA",
+    url: "/#experiencia",
+  },
+  {
+    title: "SOBRE MÍ",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "CONTACTO",
+    url: "mailto:mateocastano1515@gmail.com",
+  },
+]
+---
+
+<header class="flex justify-center p-3 bg-rodeo-dust-400">
+    <nav class="flex bg-rodeo-dust-200 border-2 border-rodeo-dust-500 mx-auto rounded-full shadow-xl">
+        {
+            navItems.map((link) => (
+              <a class="px-4 py-1 hover:bg-rodeo-dust-100 active:bg-rodeo-dust-300 hover:scale-125 hover:rounded-full hover:shadow-lg hover:shadow-rodeo-dust-800 transition-all" href={link.url}>
+                {link.title}
+              </a>
+            ))
+          }
+    </nav>
+</header>

@@ -1,0 +1,22 @@
+---
+import SectionContainer from '../components/SectionContainer.astro';
+import Description from '../components/Description.astro';
+import Projects from '../components/Projects.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Portfolio de Mateo Castaño">
+	<main>
+		<SectionContainer>
+			<Description></Description>
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<Projects ></Projects>
+		</SectionContainer>
+	</main>
+</Layout>
+
+<style>
+
+</style>
