@@ -3,9 +3,11 @@ import SectionContainer from '../components/SectionContainer.astro';
 import Description from '../components/Description.astro';
 import Projects from '../components/Projects.astro';
 import Layout from '../layouts/Layout.astro';
+import Experiences from '../components/Experiences.astro';
 ---
 
-<Layout title="Portfolio de Mateo Castaño">
+<Layout title="Portfolio de Mateo Castaño"
+description='Desarrollador creativo, con ideas claras, buenas prácticas y flexibilidad.'>
 	<main>
 		<SectionContainer>
 			<Description></Description>
@@ -13,6 +15,10 @@ import Layout from '../layouts/Layout.astro';
 
 		<SectionContainer id="proyectos">
 			<Projects ></Projects>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<Experiences></Experiences>
 		</SectionContainer>
 	</main>
 </Layout>

@@ -1,20 +1,32 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<title>{title}</title>
 	</head>
 	<body class="bg-rodeo-dust-300 flex flex-col">
 		<Header></Header>
 		<slot></slot>
+		<Footer></Footer>
 	</body>
 
 </html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+
+</style>
