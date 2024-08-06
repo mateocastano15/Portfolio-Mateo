@@ -1,18 +1,26 @@
-<div class="max-w-xl grid grid-cols-5 grid-rows-4 items-center">
-    <div class="col-span-2 row-span-4 pr-5 pt-5 pb-5">
-        <img src="/public/maletin.png">
+---
+const {class: className, title, time, img, description} = Astro.props
+---
+
+<div class="grid max-w-xl grid-cols-7 grid-rows-3 items-center py-5">
+    <div class="col-span-2 row-span-3 col-start-6 justify-self-center">
+        <img src={img}>
     </div>
 
-    <div class="col-span-3 col-start-3 ">
-        <h2 class="text-right text-lg font-bold text-red-700">Sistema de Gestión de Hogar Inteligente</h2>
+    <div class="col-span-5 col-start-1 row-start-1 justify-self-start pb-2 pl-2">
+        <h2 class="text-xl font-black">{title}</h2>
+        <h6 class="text-xs text-stone-500 font-extralight">{time}</h6>
     </div>
 
-    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-rodeo-dust-400 rounded-lg p-2 bg-opacity-40">
-        <p class="text-justify leading-4 text-sm">Backend robusto para un sistema 
-            de hogar inteligente que permite a los usuarios 
-            controlar y monitorear dispositivos como luces, 
-            termostatos y cámaras de seguridad de forma 
-            remota.</p>
-    </div>
-    
+    <div class="col-span-5 row-span-2 row-start-2 col-start-1 text-sm self-start">
+        <ul class="leading-4 space-y-1 list-disc list-inside font-extralight">
+            {
+                description.map((text: unknown)=>(
+                    <li>
+                        {text}
+                    </li>
+                ))
+            }
+        </ul>
+    </div> 
 </div>

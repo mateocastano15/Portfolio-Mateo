@@ -1,14 +1,43 @@
 ---
 import Project from "./Project.astro"
+
+const projects = [
+    {
+        title: "Sistema de Gestión de Hogar Inteligente",
+        description: "Backend robusto para un sistema de hogar inteligente que permite a los usuarios controlar y monitorear dispositivos como luces, termostatos y cámaras de seguridad de forma remota.",
+        img: "/public/maletin.png",
+        tecs: [
+            {
+                title: "Spring Boot",
+                img: ""
+            },
+            {
+                title: "SQL",
+                img: ""
+            },
+            {
+                title: "JUnit",
+                img: ""
+            }
+        ]
+    }
+]
 ---
 
 <div class="flex flex-col justify-center gap-6">
-    <div class="bg-rodeo-dust-400 bg-opacity-50 pl-6 pr-6 rounded-md">
+    <div class="bg-rodeo-dust-400 bg-opacity-50 pl-6 pr-6 rounded-md shadow-lg">
         <h1 class="py-10 text-3xl font-semibold text-rodeo-dust-950">Proyectos</h1>
     </div>
     
-    <div class=" pl-6 pr-6 rounded-md hover:scale-110 hover:bg-rodeo-dust-900 hover:bg-opacity-20 bg-rodeo-dust-900 bg-opacity-20 transition-all hover:font-semibold">
-        <Project></Project>
-    </div>
+    {
+        projects.map((project)=>(
+            <Project 
+            title= {project.title}
+            description= {project.description}
+            img = {project.img}
+            tecs = {project.tecs}
+            ></Project>
+        ))
+    }
     
 </div>

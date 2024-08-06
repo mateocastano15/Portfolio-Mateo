@@ -1,22 +1,33 @@
-<div class="max-w-xl grid grid-cols-5 grid-rows-4 items-center">
+---
+    import Pill from "./Pill.astro"
+    
+    const {class: className, title, description, img, tecs} = Astro.props
+---
+
+<div class="max-w-xl grid grid-cols-5 grid-rows-4 items-center pl-6 pr-6 rounded-md hover:scale-110 hover:bg-rodeo-dust-900 hover:bg-opacity-20 bg-rodeo-dust-900 bg-opacity-20 transition-all hover:font-semibold shadow-xl opacity-80 hover:opacity-100 ">
     <div class="col-span-2 row-span-4 pr-5 pt-5 pb-5">
-        <img src="/public/maletin.png">
+        <img src={img}>
     </div>
 
-    <div class="col-span-3 col-start-3 ">
-        <h2 class="text-right text-lg font-bold text-red-700">Sistema de Gestión de Hogar Inteligente</h2>
+    <div class="col-span-3 col-start-3 row-span-2 row-start-1 pb-10">
+        <h2 class="text-right text-lg font-black text-red-700">{title}</h2>
     </div>
 
-    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-rodeo-dust-400 rounded-lg p-2 bg-opacity-40">
-        <p class="text-justify leading-4 text-sm">Backend robusto para un sistema 
-            de hogar inteligente que permite a los usuarios 
-            controlar y monitorear dispositivos como luces, 
-            termostatos y cámaras de seguridad de forma 
-            remota.</p>
+    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-rodeo-dust-400 rounded-lg p-2 bg-opacity-40 shadow-md self-end">
+        <p class="text-justify leading-4 text-sm">{description}</p>
     </div>
 
-    <div class="col-span-3 col-start-3 row-start-4 self-start">
-        <button>Spring Boot</button>
+    <div class="col-span-3 col-start-3 row-start-4">
+        <ul class="flex flex-row gap-0.5">
+            {
+                tecs.map((tec: { title: any; img: any }) =>(
+                    <Pill 
+                    title={tec.title} 
+                    img={tec.img}></Pill>
+                ))
+            }
+        </ul>
     </div>
     
 </div>
+

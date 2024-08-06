@@ -1,14 +1,44 @@
 ---
 import Experience from "./Experience.astro"
+
+const experiencias = [
+    {
+        title: "Encargado De Tienda",
+        time: "may. 2023 - nov. 2023",
+        img: "/public/logo.png",
+        description: [
+            "Coordinación con proveedores para pedidos y abastecimiento, recepción de entregas, verificación de calidad y almacenamiento eficiente.",
+            "Planificación de horarios y supervisión del equipo para asegurar cobertura óptima y servicio de calidad.",
+            "Supervisión de inventarios para garantizar la disponibilidad constante de elementos esenciales."
+        ]
+    },
+    {
+        title: "Cajero",
+        time: "abr. 2022 - ene. 2023",
+        img: "/public/512px-Wendy's_logo_2012.svg.webp",
+        description: [
+            "Atención al cliente, asistiendo en la selección de productos, resolución de consultas, ventas y manejo de efectivo, incluyendo pagos y devoluciones.",
+            "Supervisión de la recepción de productos, control de calidad, organización y gestión eficiente del inventario.",
+            "Desempeño en diversos roles dentro del local, apoyando en atención al cliente, ventas, caja y gestión de inventarios."
+        ]
+    }
+]
 ---
 
 <div class="flex flex-col justify-center gap-6">
     <div class="bg-rodeo-dust-400 bg-opacity-50 pl-6 pr-6 rounded-md">
         <h1 class="py-10 text-3xl font-semibold text-rodeo-dust-950">Experiencia</h1>
     </div>
-    
-    <div class=" pl-6 pr-6 rounded-md hover:scale-110 hover:bg-rodeo-dust-900 hover:bg-opacity-20 bg-rodeo-dust-900 bg-opacity-20 transition-all hover:font-semibold">
-        <Experience></Experience>
-    </div>
-    
+
+    <li class="list-none divide-y-2 divide-black">
+    {
+        experiencias.map((experiencia)=>(
+            <Experience 
+            title= {experiencia.title} 
+            time= {experiencia.time} 
+            img = {experiencia.img}
+            description = {experiencia.description} ></Experience>
+        ))
+    }
+    </li>
 </div>
