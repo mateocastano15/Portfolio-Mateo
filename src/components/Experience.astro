@@ -2,14 +2,14 @@
 const {class: className, title, time, img, description} = Astro.props
 ---
 
-<div class="grid max-w-xl grid-cols-7 grid-rows-3 items-center py-5">
+<div class="grid max-w-xl grid-cols-7 grid-rows-3 items-center">
     <div class="col-span-2 row-span-3 col-start-6 justify-self-center">
         <img src={img}>
     </div>
 
     <div class="col-span-5 col-start-1 row-start-1 justify-self-start pb-2 pl-2">
-        <h2 class="text-xl font-black text-outrageous-orange-500">{title}</h2>
-        <h6 class="text-xs text-stone-500 font-extralight">{time}</h6>
+        <h2 class="text-xl font-black text-teal-blue-200">{title}</h2>
+        <h6 class="text-xs text-gray-300 font-extralight">{time}</h6>
     </div>
 
     <div class="col-span-5 row-span-2 row-start-2 col-start-1 text-sm self-start">

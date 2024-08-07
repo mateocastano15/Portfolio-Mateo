@@ -4,17 +4,17 @@
     const {class: className, title, description, img, tecs} = Astro.props
 ---
 
-<div class="max-w-xl grid bg-cod-gray-300 grid-cols-5 grid-rows-4 items-center pl-6 pr-6 rounded-md hover:scale-110 hover:bg-cod-gray-200 hover:font-semibold transition-all shadow-md shadow-cod-gray-900">
+<div class="max-w-xl grid bg-teal-blue-100 grid-cols-5 grid-rows-4 items-center pl-6 pr-6 rounded-md hover:scale-110  transition-all shadow-md shadow-cod-gray-900 border-2 border-teal-blue-600">
     <div class="col-span-2 row-span-4 pr-16 pt-5 pb-5">
         <img src={img} class="scale-150 justify-self-start self-start">
     </div>
 
-    <div class="col-span-3 col-start-3 row-span-2 row-start-1 pb-12">
-        <h2 class="text-right text-lg font-black text-outrageous-orange-800">{title}</h2>
+    <div class="col-span-3 col-start-3 row-span-2 row-start-1 pb-14">
+        <h2 class="text-right text-lg font-extrabold text-teal-blue-900">{title}</h2>
     </div>
 
-    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-cod-gray-100 rounded-lg p-2 bg-opacity-40 shadow-md shadow-cod-gray-400 self-end">
-        <p class="text-justify leading-4 text-sm">{description}</p>
+    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-cod-gray-200 border-2 border-cod-gray-300 rounded-lg p-2 bg-opacity-40 shadow-md shadow-cod-gray-400 self-end">
+        <p class="text-pretty leading-4 text-md text-center">{description}</p>
     </div>
 
     <div class="col-span-3 col-start-3 row-start-4">
