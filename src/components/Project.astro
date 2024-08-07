@@ -4,16 +4,16 @@
     const {class: className, title, description, img, tecs} = Astro.props
 ---
 
-<div class="max-w-xl grid grid-cols-5 grid-rows-4 items-center pl-6 pr-6 rounded-md hover:scale-110 hover:bg-rodeo-dust-900 hover:bg-opacity-20 bg-rodeo-dust-900 bg-opacity-20 transition-all hover:font-semibold shadow-xl opacity-80 hover:opacity-100 ">
-    <div class="col-span-2 row-span-4 pr-5 pt-5 pb-5">
-        <img src={img}>
+<div class="max-w-xl grid bg-cod-gray-300 grid-cols-5 grid-rows-4 items-center pl-6 pr-6 rounded-md hover:scale-110 hover:bg-cod-gray-200 hover:font-semibold transition-all shadow-md shadow-cod-gray-900">
+    <div class="col-span-2 row-span-4 pr-16 pt-5 pb-5">
+        <img src={img} class="scale-150 justify-self-start self-start">
     </div>
 
-    <div class="col-span-3 col-start-3 row-span-2 row-start-1 pb-10">
-        <h2 class="text-right text-lg font-black text-red-700">{title}</h2>
+    <div class="col-span-3 col-start-3 row-span-2 row-start-1 pb-12">
+        <h2 class="text-right text-lg font-black text-outrageous-orange-800">{title}</h2>
     </div>
 
-    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-rodeo-dust-400 rounded-lg p-2 bg-opacity-40 shadow-md self-end">
+    <div class="col-span-3 col-start-3 row-start-2 row-span-2 bg-cod-gray-100 rounded-lg p-2 bg-opacity-40 shadow-md shadow-cod-gray-400 self-end">
         <p class="text-justify leading-4 text-sm">{description}</p>
     </div>
 

@@ -2,7 +2,7 @@
 const {class: className, title, img} = Astro.props
 ---
 
-<div class="rounded-xl bg-rose-200 border-2 border-rose-300 p-1 font-medium shadow-md">
+<div class="flex flex-row rounded-xl gap-2 items-center justify-center bg-outrageous-orange-300 border-2 border-outrageous-orange-400 p-1 font-medium shadow-md">
+    <img src={img} class="size-5">
     {title}
-    {img}
 </div>

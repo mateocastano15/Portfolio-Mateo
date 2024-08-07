@@ -1,5 +1,6 @@
 ---
 import Experience from "./Experience.astro"
+import Title from "./Title.astro"
 
 const experiencias = [
     {
@@ -26,9 +27,7 @@ const experiencias = [
 ---
 
 <div class="flex flex-col justify-center gap-6">
-    <div class="bg-rodeo-dust-400 bg-opacity-50 pl-6 pr-6 rounded-md">
-        <h1 class="py-10 text-3xl font-semibold text-rodeo-dust-950">Experiencia</h1>
-    </div>
+    <Title title="Experiencia"></Title>
 
     <li class="list-none divide-y-2 divide-black">
     {

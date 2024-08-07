@@ -1,12 +1,12 @@
 ---
 const navItems = [
   {
+      title: "EXPERIENCIA",
+      url: "/#experiencia",
+    },  
+  {
     title: "PROYECTOS",
     url: "/#proyectos",
-  },
-  {
-    title: "EXPERIENCIA",
-    url: "/#experiencia",
   },
   {
     title: "SOBRE MÍ",
@@ -19,11 +19,11 @@ const navItems = [
 ]
 ---
 
-<header class="flex justify-center p-3 bg-rodeo-dust-400 opacity-50 hover:opacity-100 transition-opacity duration-300">
-    <nav class="flex bg-rodeo-dust-200 border-2 border-rodeo-dust-500 mx-auto rounded-full shadow-xl">
+<header class="flex justify-center p-3 bg-cod-gray-900 shadow-md shadow-cod-gray-900 duration-300">
+    <nav class="flex bg-cod-gray-200 border-2 border-cod-gray-300 mx-auto rounded-full shadow-md shadow-black">
         {
             navItems.map((link) => (
-              <a class="px-4 py-1 hover:bg-rodeo-dust-100 active:bg-rodeo-dust-300 hover:scale-125 hover:rounded-full hover:shadow-lg hover:shadow-rodeo-dust-800 transition-all" 
+              <a class="px-4 py-1 hover:bg-cod-gray-100 active:bg-cod-gray-300 hover:scale-125 hover:text-black text-gray-800 font-semibold hover:rounded-full hover:shadow-xl transition-all" 
               href={link.url}>
                 {link.title}
               </a>

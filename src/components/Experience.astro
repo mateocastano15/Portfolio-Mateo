@@ -8,12 +8,12 @@ const {class: className, title, time, img, description} = Astro.props
     </div>
 
     <div class="col-span-5 col-start-1 row-start-1 justify-self-start pb-2 pl-2">
-        <h2 class="text-xl font-black">{title}</h2>
+        <h2 class="text-xl font-black text-outrageous-orange-500">{title}</h2>
         <h6 class="text-xs text-stone-500 font-extralight">{time}</h6>
     </div>
 
     <div class="col-span-5 row-span-2 row-start-2 col-start-1 text-sm self-start">
-        <ul class="leading-4 space-y-1 list-disc list-inside font-extralight">
+        <ul class="leading-4 space-y-1 list-disc list-inside font-extralight text-white">
             {
                 description.map((text: unknown)=>(
                     <li>
